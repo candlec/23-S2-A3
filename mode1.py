@@ -9,13 +9,30 @@ class Mode1Navigator:
         """
         Student-TODO: Best/Worst Case
         """
-        raise NotImplementedError()
+        self.islands = islands
+        self.crew = crew
+
 
     def select_islands(self) -> list[tuple[Island, int]]:
         """
         Student-TODO: Best/Worst Case
         """
-        raise NotImplementedError()
+        attack_list = []
+
+        island = self.islands.pop()
+
+        for island in self.islands:
+            name = island.get("name")
+            money = island['money']
+            marines = island['marines']
+
+            crew = marines
+
+            pair = (name, crew)
+
+            attack_list.append(pair)
+
+        return attack_list
 
     def select_islands_from_crew_numbers(self, crew_numbers: list[int]) -> list[float]:
         """

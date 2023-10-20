@@ -9,7 +9,7 @@ class Mode2Navigator:
         """
         Student-TODO: Best/Worst Case
         """
-        raise NotImplementedError()
+        self.n_pirates = n_pirates
 
     def add_islands(self, islands: list[Island]):
         """
